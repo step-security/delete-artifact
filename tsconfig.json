@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "target": "es2022",
+        "isolatedModules": true,
+        "verbatimModuleSyntax": true,
+
+        "strict": true,
+        "noUncheckedIndexedAccess": true,
+        "noImplicitOverride": true,
+
+        "module": "preserve",
+        "noEmit": true,
+        "rootDir": "./src"
+    },
+    "exclude": ["node_modules"]
+}
+

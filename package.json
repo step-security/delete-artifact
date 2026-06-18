@@ -1,0 +1,36 @@
+{
+    "name": "delete-artifact",
+    "description": "Deletes artifacts from a workflow run",
+    "version": "6.0.0",
+    "main": "src/index.ts",
+    "type": "module",
+    "engines": {
+        "node": ">=24.0.0"
+    },
+    "scripts": {
+        "build": "ncc build"
+    },
+    "keywords": [
+        "github",
+        "github-actions",
+        "delete-artifact",
+        "artifact"
+    ],
+    "author": "step-security",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/step-security/delete-artifact.git"
+    },
+    "dependencies": {
+        "@actions/artifact": "^6.2.1",
+        "@actions/core": "^3.0.0",
+        "axios": "^1.18.0",
+        "minimatch": "^10.2.4"
+    },
+    "devDependencies": {
+        "@types/node": "^25.4.0",
+        "@vercel/ncc": "^0.38.4",
+        "typescript": "^5.4.5"
+    }
+}
