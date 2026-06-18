@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  pull_request:
 
 defaults:
   run:
@@ -20,17 +21,17 @@ jobs:
       - name: Create test file
         run: echo hello > world.txt
 
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v7
         with:
           name: my-artifact
           path: world.txt
 
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v7
         with:
           name: my-artifact-2
           path: world.txt
 
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v7
         with:
           name: my-artifact-3
           path: world.txt

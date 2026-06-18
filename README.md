@@ -1,7 +1,6 @@
 [![StepSecurity Maintained Action](https://raw.githubusercontent.com/step-security/maintained-actions-assets/main/assets/maintained-action-banner.png)](https://docs.stepsecurity.io/actions/stepsecurity-maintained-actions)
 
-![CI](https://github.com/GeekyEggo/delete-artifact/workflows/CI/badge.svg)
-![Example](https://github.com/GeekyEggo/delete-artifact/workflows/Example/badge.svg)
+![CI](https://github.com/step-security/delete-artifact/workflows/CI/badge.svg)
 
 # Delete artifacts
 
@@ -9,18 +8,14 @@ A GitHub Action for deleting artifacts within the workflow run. This can be usef
 
 ## ✅ Compatibility
 
-| `step-security/delete-artifac` | `actions/upload-artifact` |
+| `step-security/delete-artifact` | `actions/upload-artifact` |
 | --------------------------- | ------------------------- |
 | `@v6`                       | `@v4`, `@v6`              |
-| ~~@v4~~, `@v5`              | `@v4`                     |
-| `@v1`, `@v2`                | `@v1`, `@v2`, `@v3`       |
 
 <!-- prettier-ignore -->
 > [!TIP]
-> You can reference the immutable commit SHA, instead of a version, for example.
-> ```yml
-> - uses: step-security/delete-artifac@176a747ab7e287e3ff4787bf8a148716375ca118 # v6.0.0
-> ```
+> You can reference the immutable commit SHA, instead of a version.
+
 
 <!-- prettier-ignore-end -->
 
@@ -43,7 +38,7 @@ steps:
           name: my-artifact
           path: test.txt
 
-    - uses: step-security/delete-artifac@v6
+    - uses: step-security/delete-artifact@v6
       with:
           name: my-artifact
 ```
@@ -52,7 +47,7 @@ steps:
 
 ```yml
 steps:
-    - uses: step-security/delete-artifac@v6
+    - uses: step-security/delete-artifact@v6
       with:
           name: |
               artifact-*
@@ -66,7 +61,7 @@ By default, the action will fail when it was not possible to delete an artifact 
 
 ```yml
 steps:
-    - uses: step-security/delete-artifac@v6
+    - uses: step-security/delete-artifact@v6
       with:
           name: okay-to-keep
           failOnError: false

@@ -8,8 +8,7 @@
         "node": ">=24.0.0"
     },
     "scripts": {
-        "build": "ncc build",
-        "watch": "ncc build -w"
+        "build": "ncc build"
     },
     "keywords": [
         "github",
@@ -17,16 +16,17 @@
         "delete-artifact",
         "artifact"
     ],
-    "author": "GeekyEggo",
+    "author": "step-security",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/geekyeggo/delete-artifact"
+        "url": "git+https://github.com/step-security/delete-artifact.git"
     },
     "dependencies": {
         "@actions/artifact": "^6.2.1",
         "@actions/core": "^3.0.0",
         "@actions/github": "^9.0.0",
+        "axios": "^1.18.0",
         "minimatch": "^10.2.4"
     },
     "devDependencies": {
