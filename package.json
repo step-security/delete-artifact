@@ -25,7 +25,6 @@
     "dependencies": {
         "@actions/artifact": "^6.2.1",
         "@actions/core": "^3.0.0",
-        "@actions/github": "^9.0.0",
         "axios": "^1.18.0",
         "minimatch": "^10.2.4"
     },
