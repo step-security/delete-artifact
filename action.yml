@@ -1,0 +1,25 @@
+name: Delete Artifact
+description: Delete artifacts created within the workflow run.
+inputs:
+  name:
+    description: The name of the artifact to delete; multiple names can be supplied on new lines.
+    required: true
+  token:
+    description: GitHub token with read and write access to actions for the repository.
+    required: false
+    default: ${{ github.token }}
+    deprecationMessage: Token is no longer required.
+  useGlob:
+    description: Indicates whether the name, or names, should be treated as glob patterns.
+    required: false
+    default: "true"
+  failOnError:
+    description: Indicates whether the action should fail upon encountering an error.
+    required: false
+    default: "true"
+runs:
+  using: node24
+  main: ./dist/index.js
+branding:
+  icon: trash-2
+  color: red
